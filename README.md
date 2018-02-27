@@ -10,9 +10,9 @@ Back End: json-server , third party api
   
   Installation: _`npm install`_
   
-  Load in dev mode: _`npm run dev`_
+  Run in dev mode: _`npm run dev`_
   
-  load in production mode:  
+  Run in production mode:  
   _`npm run build_prod`_                  
   _`npm run server`_
 
