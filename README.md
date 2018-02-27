@@ -1,6 +1,6 @@
 # BooksAndLongForm
 Small application 
-Front End: angular, ui-router, angular-material, webpack -p, babel
+Front End: angular, ui-router, angular-material, webpack, babel
 
 Back End: json-server , third party api
 
@@ -16,4 +16,4 @@ Back End: json-server , third party api
   _`npm run build_prod`_                  
   _`npm run server`_
 
-open in browser: _`http://localhost:3000/`_
+Open in browser: _`http://localhost:3000/`_
