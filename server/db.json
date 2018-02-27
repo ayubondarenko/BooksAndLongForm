@@ -1,0 +1,18 @@
+{
+  "t1": {
+    "string1": 11,
+    "string2": 11,
+    "date1": null,
+    "date2": null,
+    "number1": 11,
+    "number2": 11
+  },
+  "t2": {
+    "string1": null,
+    "string2": null,
+    "date1": null,
+    "date2": null,
+    "number1": null,
+    "number2": null
+  }
+}

@@ -1,0 +1,48 @@
+<div ng-cloak>
+    <md-toolbar class="md-hue-3">
+        <div class="md-toolbar-tools">
+            <h3><span flex class="toolbar"> Задание 1 Каталог хороших книг</span></h3>
+            <span flex></span>
+            <md-button ui-sref="longForm"
+                       class="md-raised" aria-label="specail form">
+                Длинная форма
+                <md-icon class="material-icons">arrow_forward</md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+
+
+    <md-grid-list flex
+                  md-cols-xs="1" md-cols-sm="2" md-cols-md="3" md-cols-md="4" md-cols-lg="5" md-cols-xl="6"
+                  md-row-height-gt-md="3:4" md-row-height="3:4"
+                  md-gutter="8px" md-gutter-gt-sm="16px">
+
+        <md-grid-tile ng-repeat="book in catCtrl.catalog "
+                      style="width: 100%;"
+                      md-whiteframe="5"
+                      md-colspan-sm="1"
+                      md-colspan-xs="1">
+
+            <!--src="{{catCtrl.defaultImage}}"-->
+            <a ui-sref="book({bookId:book.id})" style="width: inherit; margin: 10px">
+                <img style="width: inherit"
+                     class="picture-rect"
+                     ng-src="{{catCtrl.getPreview(book)}}"
+                     err-src="{{catCtrl.defaultImage}}">
+
+                <div class="md-title" style="position: absolute;
+            bottom: 5px; width: inherit;
+            text-align: center;
+            background-color: rgba(15,74,115,0.5);
+            color: azure">
+                    {{book.title.default}}</h3>
+                </div>
+            </a>
+        </md-grid-tile>
+    </md-grid-list>
+
+
+    <!--</div>-->
+
+    <!--<p>This page demonstrates <span class="md-title">nested</span> views.</p>-->
+</div>

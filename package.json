@@ -1,0 +1,47 @@
+{
+  "name": "Angular_Ag_App",
+  "version": "1.0.0",
+  "description": "Небольшой код на ангуляр",
+  "main": "index.js",
+  "scripts": {
+    "build_dev": "webpack  --display-error-details --color --watch",
+    "build_prod": "NODE_ENV=production webpack -p --config webpack.production.config.js",
+    "server": "node ./server/server.js ",
+    "dev": " npm run server |npm run build_dev",
+    "deploy": " npm run build_prod | npm run server"
+  },
+  "author": "Алексндр",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "plugins": [
+      "angularjs-annotate"
+    ]
+  },
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.15",
+    "angular": "^1.6.9",
+    "angular-animate": "^1.6.9",
+    "angular-aria": "^1.6.9",
+    "angular-material": "^1.1.7",
+    "angular-messages": "^1.6.9"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-angularjs-annotate": "^0.8.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "copy-webpack-plugin": "^4.4.1",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^1.1.8",
+    "json-server": "^0.12.1",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.11.0",
+    "webpack-material-design-icons": "^0.1.0"
+  }
+}

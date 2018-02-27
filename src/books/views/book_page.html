@@ -1,0 +1,103 @@
+<md-toolbar class="md-hue-3">
+    <div class="md-toolbar-tools">
+        <span class="toolbar">{{bookCtrl.book.title.default}}</span>
+        <span flex></span>
+        <md-button ui-sref="catalog"
+                   class="md-raised" aria-label="specail form">
+            <md-icon class="material-icons">keyboard_backspace</md-icon>
+            К каталогу
+        </md-button>
+    </div>
+
+</md-toolbar>
+<div layout-xs="column" layout-gt-xs="row" flex>
+    <div layout="column" flex flex-gt-sm="30">
+
+        <md-card  >
+            <div flex  >
+                <img md-whiteframe="12"
+                     class="picture-rect"
+                     style="width: 100%"
+                     ng-src="{{bookCtrl.getCover()}}"
+                     err-src="{{bookCtrl.defaultImage}}">
+            </div>
+            <md-card-content>
+                <md-divider></md-divider>
+                <md-list-item layout="row" ng-if="bookCtrl.len(bookCtrl.book.platformSupport)"
+                              class="md-3-line md-long-text">
+                    <md-icon class="material-icons">folder_open</md-icon>
+                    <div layout="column" class="md-body-2 md-list-item-text">Файлы:
+                        <ul>
+                            <li ng-repeat="bundle in bookCtrl.book.bundles"
+                                class="book_sub_list-item ">
+                                <!--<a ng-href="{{bookCtrl.getFileUrl(bundle.resourceId)}}"-->
+                                <!--err-src="{{bookCtrl.getErrorUrl(bundle.resourceId)}}">-->
+                                <!--{{bundle.version +' '+ bundle.id}}</a></li>-->
+
+                                <a ng-href="{{bookCtrl.getFileUrl(bundle.resourceId)}}">
+                                    {{bundle.version +' '+ bundle.id}}</a></li>
+                        </ul>
+                    </div>
+                </md-list-item>
+            </md-card-content>
+
+    </div>
+    <div flex>
+
+        <md-list-item ng-if=" bookCtrl.book.description.default"
+                      class="md-3-line md-long-text ">
+            <md-icon class="material-icons">description</md-icon>
+
+            <div class="md-list-item-text md-body-2">
+                Описание:
+                <div class="md-body-1"> {{bookCtrl.book.description.default}}</div>
+            </div>
+        </md-list-item>
+
+
+        <md-list-item ng-if="bookCtrl.book.options.authors"
+                      class="md-3-line ">
+            <!--<md-icon class="material-icons">account_circle</md-icon>-->
+            <md-icon class="material-icons">account_circle</md-icon>
+            <div class="md-list-item-text md-body-2">
+                Авторы:
+                <div class="md-subhead"> {{bookCtrl.book.options.authors}}</div>
+            </div>
+        </md-list-item>
+
+        <md-list-item ng-if="bookCtrl.book.options.ISBN"
+                      class="md-3-line ">
+            <md-icon class="material-icons">code</md-icon>
+            <div class="md-list-item-text md-body-2 ">
+                ISBN:
+                <div class="md-subhead"> {{bookCtrl.book.options.ISBN}}</div>
+            </div>
+        </md-list-item>
+
+        <md-list-item ng-if="bookCtrl.book.options.Publisher" class="md-3-line">
+            <md-icon class="material-icons">public</md-icon>
+            <div class="md-list-item-text md-body-2">
+                Издательсвто:
+                <div class="md-subhead"> {{bookCtrl.book.options.Publisher}}</div>
+            </div>
+        </md-list-item>
+
+        <md-list-item ng-if="bookCtrl.len(bookCtrl.book.platformSupport)" class="md-3-line md-long-text">
+            <md-icon class="material-icons">computer</md-icon>
+            <div layout="column" class="md-body-2 md-list-item-text">Поддерживаемые операционные системы:
+                <ul>
+                    <li ng-repeat="os in bookCtrl.book.platformSupport"
+                        class="book_sub_list-item "> {{os}}
+                    </li>
+                </ul>
+            </div>
+        </md-list-item>
+
+    </div>
+</div>
+<!--src="{{catCtrl.defaultImage}}"-->
+<!--src="{{catCtrl.defaultImage}}"-->
+
+
+
+

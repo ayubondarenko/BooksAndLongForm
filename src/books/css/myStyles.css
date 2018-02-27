@@ -1,0 +1,53 @@
+/*.active { color: red; font-weight: bolder; }*/
+.error-color {
+    color: red;
+}
+
+md-grid-list {
+    margin: 8px;
+}
+
+md-grid-tile {
+    transition: all 400ms ease-out 50ms;
+}
+
+.active {
+    color: red;
+    font-weight: bolder;
+}
+
+.book_sub_list-item {
+    list-style: circle;
+    margin: 0px;
+    line-height: 150%;
+    padding: 0;
+    color: midnightblue;
+}
+
+.toolbar {
+    color: white;
+}
+
+.toolbarShrink .face {
+    width: 48px;
+    margin: 16px;
+    border-radius: 48px;
+    border: 1px solid #ddd;
+}
+
+.md-button.small-round-bottom {
+    background-color: aliceblue;
+    min-width: 0;
+    border-radius: 50%;
+
+    line-height: 3rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+.picture-rect {
+    border-radius: 5px;
+    /*margin-right:10px ;*/
+    /*width: 100%;*/
+
+}
