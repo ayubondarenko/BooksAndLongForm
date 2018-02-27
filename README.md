@@ -8,11 +8,12 @@ Back End: json-server , third party api
 
   long form validation;
   
-  Installation: _npm install_
+  Installation: _`npm install`_
   
-  Load in dev mode: _npm run dev_
+  Load in dev mode: _`npm run dev`_
   
   load in production mode:  
-  _npm run build_prod_                  
-  _npm run server_
+  _`npm run build_prod`_                  
+  _`npm run server`_
 
+open in browser: _`http://localhost:3000/`_
